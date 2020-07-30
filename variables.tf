@@ -17,28 +17,28 @@ variable "is_hns_enabled" {
 }
 
 variable "account_name" {
-    type = string
-    description = "(optional) describe your variable"
+  type        = string
+  description = "(optional) describe your variable"
 }
 
 variable "resource_group" {
-    description = "Resource group name"
+  description = "Resource group name"
 }
 
 variable "account_tier" {
-  type = string
+  type        = string
   description = "(optional) describe your variable"
-  default="Standard"
+  default     = "Standard"
 }
 
 variable "enable_https_traffic_only" {
-  type = bool
+  type        = bool
   description = "Boolean flag which forces HTTPS if enabled"
-  default=true
+  default     = true
 }
 
 variable "account_replication_type" {
-  type = string
+  type        = string
   description = "Defines the type of replication to use for this storage account"
-  default="LRS"
+  default     = "LRS"
 }
