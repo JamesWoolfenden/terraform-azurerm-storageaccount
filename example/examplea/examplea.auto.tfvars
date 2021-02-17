@@ -1,2 +1,3 @@
 common_tags = {
-"createby" = "Terraform" }
+  "createby" = "Terraform"
+"module" = "terraform-azurerm-storageaccount" }

@@ -30,6 +30,10 @@ common_tags = {
 
 This project is 100% Open Source and licensed under the [APACHE2](LICENSE).
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
+
+No requirements.
+
 ## Providers
 
 | Name | Version |
@@ -39,16 +43,24 @@ This project is 100% Open Source and licensed under the [APACHE2](LICENSE).
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:-----:|
+|------|-------------|------|---------|:--------:|
+| access\_tier | Can only be Hot or Cool | `string` | `"Hot"` | no |
 | account\_kind | Defines the Kind of account. | `string` | `"StorageV2"` | no |
 | account\_name | (optional) describe your variable | `string` | n/a | yes |
 | account\_replication\_type | Defines the type of replication to use for this storage account | `string` | `"LRS"` | no |
 | account\_tier | (optional) describe your variable | `string` | `"Standard"` | no |
-| common\_tags | This is to help you add tags to your cloud objects | `map` | n/a | yes |
+| allow\_blob\_public\_access | Allow or disallow public access to all blobs or containers in the storage account. | `bool` | `false` | no |
+| blobs | n/a | `list` | `[]` | no |
+| common\_tags | This is to help you add tags to your cloud objects | `map(any)` | n/a | yes |
+| custom\_domain | n/a | `list` | `[]` | no |
 | default\_action | (optional) describe your variable | `string` | `"Deny"` | no |
 | enable\_https\_traffic\_only | Boolean flag which forces HTTPS if enabled | `bool` | `true` | no |
 | is\_hns\_enabled | Is Hierarchical Namespace enabled? This can be used with Azure Data Lake Storage Gen 2 | `bool` | `false` | no |
+| large\_file\_share\_enabled | n/a | `bool` | `false` | no |
+| network\_rules | n/a | `list` | `[]` | no |
+| queue\_properties | n/a | `list` | `[]` | no |
 | resource\_group | Resource group name | `any` | n/a | yes |
+| static\_website | n/a | `map` | <pre>{<br>  "error_404_document": "404.html",<br>  "index_document": "index.html"<br>}</pre> | no |
 
 ## Outputs
 
