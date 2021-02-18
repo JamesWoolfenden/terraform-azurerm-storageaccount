@@ -15,7 +15,6 @@ repos:
       - id: pretty-format-json
         args:
           - --autofix
-
       - id: detect-private-key
   - repo: git://github.com/Lucas-C/pre-commit-hooks
     rev: v1.1.9
@@ -48,7 +47,7 @@ repos:
       - id: tf2docs
         language_version: python3.8
   - repo: git://github.com/bridgecrewio/checkov
-    rev: 1.0.775
+    rev: 1.0.792
     hooks:
       - id: checkov
         verbose: true

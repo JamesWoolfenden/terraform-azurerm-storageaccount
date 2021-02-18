@@ -1,7 +1,9 @@
 resource "azurerm_storage_account" "store" {
   #checkov:skip=CKV_AZURE_35: "Ensure default network access rule for Storage Accounts is set to deny"
   #As rule is faulty
-  #checkov:skip=CKV_AZURE_35: CKV_AZURE_43: This is triggering falsely
+  #checkov:skip=CKV_AZURE_43: This is triggering falsely
+  #checkov:skip=CKV_AZURE_36: This is triggering falsely as using dynamic blocks
+
   access_tier              = var.access_tier
   account_kind             = var.account_kind
   account_replication_type = var.account_replication_type
