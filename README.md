@@ -39,46 +39,46 @@ No requirements.
 
 | Name | Version |
 |------|---------|
-| azurerm | n/a |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | n/a |
 
 ## Modules
 
-No Modules.
+No modules.
 
 ## Resources
 
-| Name |
-|------|
-| [azurerm_storage_account](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account) |
-| [azurerm_storage_account_network_rules](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account_network_rules) |
+| Name | Type |
+|------|------|
+| [azurerm_storage_account.store](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account) | resource |
+| [azurerm_storage_account_network_rules.store](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account_network_rules) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| access\_tier | Can only be Hot or Cool | `string` | `"Hot"` | no |
-| account\_kind | Defines the Kind of account. | `string` | `"StorageV2"` | no |
-| account\_name | Storage account name | `string` | n/a | yes |
-| account\_replication\_type | Defines the type of replication to use for this storage account | `string` | `"LRS"` | no |
-| account\_tier | (optional) describe your variable | `string` | `"Standard"` | no |
-| allow\_blob\_public\_access | Allow or disallow public access to all blobs or containers in the storage account. | `bool` | `false` | no |
-| blobs | n/a | `list` | `[]` | no |
-| common\_tags | This is to help you add tags to your cloud objects | `map(any)` | n/a | yes |
-| custom\_domain | n/a | `list` | `[]` | no |
-| default\_action | describe your variable | `string` | `"Deny"` | no |
-| enable\_https\_traffic\_only | Boolean flag which forces HTTPS if enabled | `bool` | `true` | no |
-| is\_hns\_enabled | Is Hierarchical Namespace enabled? This can be used with Azure Data Lake Storage Gen 2 | `bool` | `false` | no |
-| large\_file\_share\_enabled | n/a | `bool` | `false` | no |
-| network\_rules | n/a | `list` | `[]` | no |
-| queue\_properties | n/a | `list` | `[]` | no |
-| resource\_group | Resource group name | `any` | n/a | yes |
-| static\_website | n/a | `map` | <pre>{<br>  "error_404_document": "404.html",<br>  "index_document": "index.html"<br>}</pre> | no |
+| <a name="input_access_tier"></a> [access\_tier](#input\_access\_tier) | Can only be Hot or Cool | `string` | `"Hot"` | no |
+| <a name="input_account_kind"></a> [account\_kind](#input\_account\_kind) | Defines the Kind of account. | `string` | `"StorageV2"` | no |
+| <a name="input_account_name"></a> [account\_name](#input\_account\_name) | Storage account name | `string` | n/a | yes |
+| <a name="input_account_replication_type"></a> [account\_replication\_type](#input\_account\_replication\_type) | Defines the type of replication to use for this storage account | `string` | `"LRS"` | no |
+| <a name="input_account_tier"></a> [account\_tier](#input\_account\_tier) | (optional) describe your variable | `string` | `"Standard"` | no |
+| <a name="input_allow_blob_public_access"></a> [allow\_blob\_public\_access](#input\_allow\_blob\_public\_access) | Allow or disallow public access to all blobs or containers in the storage account. | `bool` | `false` | no |
+| <a name="input_blobs"></a> [blobs](#input\_blobs) | n/a | `list` | `[]` | no |
+| <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | This is to help you add tags to your cloud objects | `map(any)` | n/a | yes |
+| <a name="input_custom_domain"></a> [custom\_domain](#input\_custom\_domain) | n/a | `list` | `[]` | no |
+| <a name="input_default_action"></a> [default\_action](#input\_default\_action) | describe your variable | `string` | `"Deny"` | no |
+| <a name="input_enable_https_traffic_only"></a> [enable\_https\_traffic\_only](#input\_enable\_https\_traffic\_only) | Boolean flag which forces HTTPS if enabled | `bool` | `true` | no |
+| <a name="input_is_hns_enabled"></a> [is\_hns\_enabled](#input\_is\_hns\_enabled) | Is Hierarchical Namespace enabled? This can be used with Azure Data Lake Storage Gen 2 | `bool` | `false` | no |
+| <a name="input_large_file_share_enabled"></a> [large\_file\_share\_enabled](#input\_large\_file\_share\_enabled) | n/a | `bool` | `false` | no |
+| <a name="input_network_rules"></a> [network\_rules](#input\_network\_rules) | n/a | `list` | `[]` | no |
+| <a name="input_queue_properties"></a> [queue\_properties](#input\_queue\_properties) | n/a | `list` | `[]` | no |
+| <a name="input_resource_group"></a> [resource\_group](#input\_resource\_group) | Resource group name | `any` | n/a | yes |
+| <a name="input_static_website"></a> [static\_website](#input\_static\_website) | n/a | `map` | <pre>{<br>  "error_404_document": "404.html",<br>  "index_document": "index.html"<br>}</pre> | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| storage | n/a |
+| <a name="output_storage"></a> [storage](#output\_storage) | n/a |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Related Projects
 
