@@ -1,3 +1,4 @@
 output "storage" {
-  value = module.storage
+  value     = module.storage
+  sensitive = true
 }
