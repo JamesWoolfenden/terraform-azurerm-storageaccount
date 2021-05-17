@@ -1,4 +1,4 @@
 output "storage" {
-  value = azurerm_storage_account.store
-    sensitive=true
+  value     = azurerm_storage_account.store
+  sensitive = true
 }
