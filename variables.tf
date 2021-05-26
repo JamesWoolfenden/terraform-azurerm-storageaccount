@@ -88,3 +88,12 @@ variable "large_file_share_enabled" {
   type    = bool
   default = false
 }
+
+variable "key_vault" {
+  default = "examplekv"
+}
+
+variable "soft_delete_retention_days" {
+  type    = number
+  default = 14
+}
