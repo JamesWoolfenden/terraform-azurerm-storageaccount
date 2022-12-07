@@ -1,8 +1,6 @@
 resource "azurerm_storage_account_network_rules" "store" {
-  resource_group_name  = var.resource_group.name
-  storage_account_name = azurerm_storage_account.store.name
-
-  default_action = var.default_action
+  storage_account_id = azurerm_storage_account.store.id
+  default_action     = var.default_action
 }
 
 

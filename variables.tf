@@ -58,7 +58,7 @@ variable "custom_domain" {
   default = []
 }
 
-variable "blobs" {
+variable "blob_properties" {
   default = []
 }
 
@@ -96,4 +96,13 @@ variable "key_vault" {
 variable "soft_delete_retention_days" {
   type    = number
   default = 14
+}
+
+
+variable "blobs" {
+  type = map(any)
+}
+
+variable "containers" {
+  type = map(any)
 }

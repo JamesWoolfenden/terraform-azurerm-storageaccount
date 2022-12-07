@@ -5,14 +5,15 @@ resource "azurerm_storage_account" "store" {
   # checkov:skip=CKV_AZURE_36: This is triggering falsely as using dynamic blocks
   # checkov:skip=CKV2_AZURE_8:TODO
 
-  access_tier              = var.access_tier
-  account_kind             = var.account_kind
-  account_replication_type = var.account_replication_type
-  account_tier             = var.account_tier
-  allow_blob_public_access = var.allow_blob_public_access
+  access_tier                     = var.access_tier
+  account_kind                    = var.account_kind
+  account_replication_type        = var.account_replication_type
+  account_tier                    = var.account_tier
+  allow_nested_items_to_be_public = var.allow_nested_items_to_be_public
+  public_network_access_enabled   = var.public_network_access_enabled
 
   dynamic "blob_properties" {
-    for_each = var.blobs
+    for_each = var.blob_properties
     content {
       cors_rule {
         allowed_headers    = blob_properties.value["allowed_headers"]
@@ -47,7 +48,7 @@ resource "azurerm_storage_account" "store" {
   min_tls_version          = "TLS1_2"
 
   # can only consist of lowercase letters and numbers, and must be between 3 and 24 characters long
-  name = lower(var.account_name)
+  name = local.account_name
 
   dynamic "network_rules" {
     for_each = var.network_rules
@@ -102,4 +103,19 @@ resource "azurerm_storage_account" "store" {
   }
 
   tags = var.common_tags
+}
+
+
+locals {
+  account_name = lower(var.account_name)
+}
+
+variable "allow_nested_items_to_be_public" {
+  type    = bool
+  default = false
+}
+
+var "public_network_access_enabled" {
+  type    = bool
+  default = false
 }

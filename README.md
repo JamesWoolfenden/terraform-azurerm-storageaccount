@@ -56,6 +56,8 @@ No modules.
 | [azurerm_storage_account.store](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account) | resource |
 | [azurerm_storage_account_customer_managed_key.key](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account_customer_managed_key) | resource |
 | [azurerm_storage_account_network_rules.store](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account_network_rules) | resource |
+| [azurerm_storage_blob.pike](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_blob) | resource |
+| [azurerm_storage_container.container](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_container) | resource |
 | [azurerm_client_config.current](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/client_config) | data source |
 
 ## Inputs
@@ -68,8 +70,11 @@ No modules.
 | <a name="input_account_replication_type"></a> [account\_replication\_type](#input\_account\_replication\_type) | Defines the type of replication to use for this storage account | `string` | `"LRS"` | no |
 | <a name="input_account_tier"></a> [account\_tier](#input\_account\_tier) | (optional) describe your variable | `string` | `"Standard"` | no |
 | <a name="input_allow_blob_public_access"></a> [allow\_blob\_public\_access](#input\_allow\_blob\_public\_access) | Allow or disallow public access to all blobs or containers in the storage account. | `bool` | `false` | no |
-| <a name="input_blobs"></a> [blobs](#input\_blobs) | n/a | `list` | `[]` | no |
+| <a name="input_allow_nested_items_to_be_public"></a> [allow\_nested\_items\_to\_be\_public](#input\_allow\_nested\_items\_to\_be\_public) | n/a | `bool` | `false` | no |
+| <a name="input_blob_properties"></a> [blob\_properties](#input\_blob\_properties) | n/a | `list` | `[]` | no |
+| <a name="input_blobs"></a> [blobs](#input\_blobs) | n/a | `map(any)` | n/a | yes |
 | <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | This is to help you add tags to your cloud objects | `map(any)` | n/a | yes |
+| <a name="input_containers"></a> [containers](#input\_containers) | n/a | `map(any)` | n/a | yes |
 | <a name="input_custom_domain"></a> [custom\_domain](#input\_custom\_domain) | n/a | `list` | `[]` | no |
 | <a name="input_default_action"></a> [default\_action](#input\_default\_action) | describe your variable | `string` | `"Deny"` | no |
 | <a name="input_enable_https_traffic_only"></a> [enable\_https\_traffic\_only](#input\_enable\_https\_traffic\_only) | Boolean flag which forces HTTPS if enabled | `bool` | `true` | no |
@@ -86,6 +91,7 @@ No modules.
 
 | Name | Description |
 |------|-------------|
+| <a name="output_containers"></a> [containers](#output\_containers) | n/a |
 | <a name="output_storage"></a> [storage](#output\_storage) | n/a |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
