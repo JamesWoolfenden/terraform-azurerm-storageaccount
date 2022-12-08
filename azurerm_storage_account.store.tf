@@ -115,7 +115,7 @@ variable "allow_nested_items_to_be_public" {
   default = false
 }
 
-var "public_network_access_enabled" {
+variable "public_network_access_enabled" {
   type    = bool
   default = false
 }
